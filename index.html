@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tratamiento de Aguas Residuales</title>
+
+<style>
+body{
+    font-family:'Segoe UI', sans-serif;
+    margin:0;
+    background:linear-gradient(180deg,#dff6ff,#ffffff);
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#023e8a,#0077b6,#00b4d8);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+h1{
+    margin:0;
+    font-size:2.8em;
+}
+
+/* SECCIONES */
+section{
+    margin:30px;
+    padding:30px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+    transition:0.5s;
+}
+
+section:hover{
+    transform:translateY(-5px);
+}
+
+h2{
+    color:#0077b6;
+}
+
+/* TARJETAS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#caf0f8;
+    padding:20px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:#90e0ef;
+}
+
+/* INTERACTIVO */
+.flow{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.step{
+    background:#ade8f4;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#info{
+    margin-top:20px;
+    padding:20px;
+    background:#edfaff;
+    border-left:6px solid #0077b6;
+    border-radius:10px;
+}
+
+/* TABLA */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td, th{
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+th{
+    background:#0077b6;
+    color:white;
+}
+
+footer{
+    background:#023e8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>💧 Tratamiento de Aguas Residuales</h1>
+<p>Proyecto técnico completo con normativa, tecnologías y aplicación real</p>
+</header>
+
+<section>
+<h2>📌 Introducción técnica</h2>
+<p>
+El tratamiento de aguas residuales es un conjunto de procesos físicos, químicos y biológicos diseñados para eliminar contaminantes del agua utilizada. Este sistema es esencial en las ciudades modernas para evitar riesgos sanitarios, proteger ecosistemas y garantizar la sostenibilidad del recurso hídrico.
+</p>
+</section>
+
+<section>
+<h2>🔄 Proceso completo interactivo</h2>
+
+<div class="flow">
+<div class="step" onclick="mostrar(0)">Recolección</div>
+<div class="step" onclick="mostrar(1)">Transporte</div>
+<div class="step" onclick="mostrar(2)">Pretratamiento</div>
+<div class="step" onclick="mostrar(3)">Primario</div>
+<div class="step" onclick="mostrar(4)">Secundario</div>
+<div class="step" onclick="mostrar(5)">Terciario</div>
+<div class="step" onclick="mostrar(6)">Lodos</div>
+<div class="step" onclick="mostrar(7)">Reuso</div>
+</div>
+
+<div id="info">Haz clic en una etapa.</div>
+
+</section>
+
+<section>
+<h2>⚙️ Tecnologías de tratamiento</h2>
+
+<div class="grid">
+<div class="card"><strong>Lodos activados:</strong> proceso biológico con microorganismos en suspensión.</div>
+<div class="card"><strong>Filtros percoladores:</strong> agua pasa por material con bacterias adheridas.</div>
+<div class="card"><strong>Lagunas de estabilización:</strong> tratamiento natural mediante luz solar y bacterias.</div>
+<div class="card"><strong>Biodiscos:</strong> discos giratorios con crecimiento biológico.</div>
+</div>
+
+</section>
+
+<section>
+<h2>⚖️ Normativa mexicana</h2>
+
+<table>
+<tr>
+<th>Norma</th>
+<th>Descripción</th>
+</tr>
+<tr>
+<td>NOM-001-SEMARNAT</td>
+<td>Límites de contaminantes en descargas a cuerpos de agua</td>
+</tr>
+<tr>
+<td>NOM-002-SEMARNAT</td>
+<td>Descargas en alcantarillado urbano</td>
+</tr>
+<tr>
+<td>NOM-003-SEMARNAT</td>
+<td>Reutilización de aguas tratadas</td>
+</tr>
+</table>
+
+</section>
+
+<section>
+<h2>🏙️ Caso real: Guadalajara</h2>
+<p>
+En la Zona Metropolitana de Guadalajara, el SIAPA administra el sistema de agua potable y saneamiento. Opera plantas de tratamiento que permiten reducir la contaminación y reutilizar el agua en actividades urbanas y agrícolas.
+</p>
+</section>
+
+<section>
+<h2>🏢 Papel del SIAPA</h2>
+
+<ul>
+<li>Construcción y mantenimiento de drenaje</li>
+<li>Operación de plantas de tratamiento</li>
+<li>Control de calidad del agua</li>
+<li>Protección ambiental</li>
+</ul>
+
+</section>
+
+<footer>
+Proyecto académico profesional | Ingeniería Civil / Arquitectura
+</footer>
+
+<script>
+
+const datos = [
+"El agua residual se genera en viviendas, industrias y comercios.",
+"Se transporta mediante colectores y estaciones de bombeo.",
+"Se eliminan sólidos, arenas y grasas.",
+"Se sedimentan sólidos en tanques.",
+"Se eliminan contaminantes con bacterias.",
+"Se desinfecta el agua para reutilización.",
+"Se tratan los lodos generados.",
+"El agua se reutiliza o descarga."
+];
+
+function mostrar(i){
+document.getElementById("info").innerText = datos[i];
+}
+
+</script>
+
+</body>
+</html>
